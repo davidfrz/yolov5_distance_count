@@ -1,5 +1,6 @@
 # yolov5-双目摄像头
 通过yolov5实现目标检测+双目摄像头实现距离测量<br>
+<div align="left"> <img src="./pic/1.png" height="320"> </div>
 示例视频 ===>[https://www.bilibili.com/video/BV1QK411w71d] (https://www.bilibili.com/video/BV1QK411w71d)<br>
 
 ## yolov5
