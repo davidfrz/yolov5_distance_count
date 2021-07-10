@@ -1,7 +1,7 @@
 # yolov5-Binocular camera-distance count-ranging
-中文文档 --->[]
+中文文档 --->[https://github.com/davidfrz/yolov5_distance_count/blob/master/README_CN.md](https://github.com/davidfrz/yolov5_distance_count/blob/master/README_CN.md)<br>
 This project can get object recognition and distance display of the measured object through YOLOV5 target detection box with binocular camera.<br>
-Sample Vedio ===>[https://www.bilibili.com/video/BV1QK411w71d] (https://www.bilibili.com/video/BV1QK411w71d)<br>
+Sample Vedio ===>[https://www.bilibili.com/video/BV1QK411w71d](https://www.bilibili.com/video/BV1QK411w71d)<br>
 
 ## yolov5
 All project is based on yolov5 ===>[https://github.com/ultralytics/yolov5](https://github.com/ultralytics/yolov5)<br>
