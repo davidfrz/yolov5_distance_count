@@ -23,6 +23,13 @@ video_remain.py
 |dis_count.py|Depth map, distance matrix|
 |video_remain.py|main|
 
+## RESULT
+|DEVICEE|FPS|
+|----|----|
+|1650|20|
+|TX2|12|
+|NX|15|
+
 JUST RUN video_remain.py and you can get what you want.
 
 if this project can help you, give me a star,plzzzzzz! 

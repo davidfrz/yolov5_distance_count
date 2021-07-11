@@ -22,6 +22,13 @@ video_remain.py
 |dis_count.py|深度图+距离矩阵|
 |video_remain.py|主函数|
 
+## RESULT
+|DEVICEE|FPS|
+|----|----|
+|1650|20|
+|TX2|12|
+|NX|15|
+
 按理来说啊~接上你的双目摄像头直接运行vedio_remain.py这个文件就能实现了
 
 如果这个项目对你有帮助 请帮我点个星星吧  谢谢啦~
