@@ -65,6 +65,8 @@ camera.set(cv2.CAP_PROP_FRAME_HEIGHT, 480)
 
 while(True):
     ret, frame = camera.read()
+
+    #  通过切片操作将原始图像frame分割成了左侧图像和右侧图像
     left_frame = frame[0:480, 0:640]
     right_frame = frame[0:480, 640:1280]
 
