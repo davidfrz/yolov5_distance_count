@@ -201,6 +201,5 @@ while(True):
 
     c = cv2.waitKey(1) & 0xff
     if c == 27:
-        cap1.release()
-        cap2.release()
+        camera.release()
         break
