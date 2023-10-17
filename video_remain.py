@@ -56,25 +56,30 @@ colors = [[random.randint(0, 255) for _ in range(3)] for _ in names]
 img01 = torch.zeros((1, 3, imgsz, imgsz), device=device)  # init img
 _ = model(img01.half() if half else img01) if device.type != 'cpu' else None  # run once
 
-cap1 = cv2.VideoCapture(0)
-cap2 = cv2.VideoCapture(2)
+# cap1 = cv2.VideoCapture(0)
+# cap2 = cv2.VideoCapture(2)
+
+camera = cv2.VideoCapture(0)
+camera.set(cv2.CAP_PROP_FRAME_WIDTH, 1280)
+camera.set(cv2.CAP_PROP_FRAME_HEIGHT, 480)
 
 while(True):
+    ret, frame = camera.read()
+    left_frame = frame[0:480, 0:640]
+    right_frame = frame[0:480, 640:1280]
 
     imgs = [None] * 1
     imgs2 = [None] * 1
 
-    ref,a=cap1.read()
-    _,b=cap2.read()
+    camera.grab()
 
-    # cv2.imshow('0', a)
-    # cv2.imshow('1', b)
+    imgs[0] = left_frame
+    imgs2[0] = right_frame
 
-    cap1.grab()
-    cap2.grab()
 
-    _, imgs[0] = cap1.retrieve()
-    _, imgs2[0] = cap2.retrieve()
+
+    # _, imgs[0] = cap1.retrieve()
+    # _, imgs2[0] = cap2.retrieve()
 
     img = [letterbox(x, new_shape=640, auto=True)[0] for x in imgs]
     # imgb = [letterbox(x1, new_shape=640, auto=True)[0] for x1 in imgs2]
@@ -84,6 +89,7 @@ while(True):
     # imgb = np.stack(imgb, 0)
 
     # Convert
+
     img = img[:, :, :, ::-1].transpose(0, 3, 1, 2)  # BGR to RGB, to bsx3x416x416
     img = np.ascontiguousarray(img)
 
